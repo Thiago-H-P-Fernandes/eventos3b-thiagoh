@@ -1,0 +1,137 @@
+body{
+    margin: 0;
+    font-family: monospace;
+}
+
+header{
+    background-color: rgb(103, 6, 160);
+    padding: 20px;
+}
+
+header > h2{
+    color: rgb(250, 250, 250);
+}
+
+.container{
+    margin: auto;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    width: 60%;
+}
+
+.container > img{
+    width: 100%;
+}
+
+footer{
+    display: flex;
+    background-color: rgb(103, 6, 160);
+    color: #fff;
+    padding: 16px;
+}
+
+.a-edit{
+    color: forestgreen;
+}
+
+.a-delete{
+    color: crimson;
+}
+
+.a-edit:hover{
+    font-weight: bold;
+    color: darkgreen;
+}
+
+.a-delete:hover{
+    font-weight: bold;
+    color: darkred;
+}
+
+.a-add{
+    color: #fff;
+    text-decoration: none;
+}
+
+.a-add:hover{
+    color: cornsilk;
+    font-weight: bold;
+}
+
+.div-title{
+    margin-bottom: 16px;
+    padding: 24px;
+    background-color: black;
+    color: #fff;
+    border-radius: 25px;
+}
+
+form{
+    margin-top: 30px;
+    padding: 8px;
+    border: 2px solid chocolate;
+    border-radius: 15px;
+}
+
+@media screen and (max-width:650px){
+    footer{
+        display: block;
+        
+    }
+
+    .container{
+        width: 100%;
+    }
+}
+
+.modal-header{
+    background-color: red;
+    color: #fff;
+}
+
+.row2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    padding: 30px;
+    margin: 20px;
+    width: 400px;
+    transition: all 0.3s ease-out;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+  }
+   
+  .card p {
+    color: #a3a5ae;
+    font-size: 16px;
+  }
+   
+  .image {
+    float: right;
+    max-width: 64px;
+    max-height: 64px;
+  }
+
+  .blue {
+    border-left: 3px solid #4895ff;
+  }
+   
+  .green {
+    border-left: 3px solid #3bb54a;
+  }
+   
+  .red {
+    border-left: 3px solid #b3404a;
+  }
+
+  .orange {
+    border-left: 3px solid #f88315;
+  }
