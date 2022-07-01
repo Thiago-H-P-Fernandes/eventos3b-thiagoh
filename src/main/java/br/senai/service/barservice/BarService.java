@@ -1,4 +1,4 @@
-package br.senai.service;
+package br.senai.service.barservice;
 
 import br.senai.model.Bar;
 import br.senai.model.Cliente;

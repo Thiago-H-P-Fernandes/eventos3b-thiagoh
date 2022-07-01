@@ -1,8 +1,8 @@
 package br.senai.controller;
 
 import br.senai.model.Evento;
-import br.senai.service.ClienteServiceImpl;
-import br.senai.service.EventoServiceImpl;
+import br.senai.service.clienteservice.ClienteServiceImpl;
+import br.senai.service.eventoservice.EventoServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

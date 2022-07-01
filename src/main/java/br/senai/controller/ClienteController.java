@@ -2,7 +2,7 @@ package br.senai.controller;
 
 
 import br.senai.model.Cliente;
-import br.senai.service.ClienteServiceImpl;
+import br.senai.service.clienteservice.ClienteServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

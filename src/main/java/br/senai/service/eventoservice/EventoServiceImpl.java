@@ -1,4 +1,4 @@
-package br.senai.service;
+package br.senai.service.eventoservice;
 
 import br.senai.model.Evento;
 import br.senai.repository.EventoRepository;
