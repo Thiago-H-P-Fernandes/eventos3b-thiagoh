@@ -22,10 +22,10 @@ import java.util.List;
 public class UserServiceImpl implements UserService, UserDetailsService {
 
     @Autowired
-    private UserRepository usuarioRepo;
+    private UserRepository usuarioRepository;
 
     @Autowired
-    private RoleRepository roleRepo;
+    private RoleRepository roleRepository;
 
 //    @Autowired
 //    private BCryptPasswordEncoder passwordEncoder;
@@ -34,14 +34,14 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     public boolean createUsuario(Usuario usuario) {
         boolean isCreated = false;
         try {
-            Usuario user_data = usuarioRepo.findUserByUsername(usuario.getUsername());
+            Usuario user_data = usuarioRepository.findUserByUsername(usuario.getUsername());
             if (user_data == null){
 //                String userPassword = usuario.getUser_password();
 //                String userPasswordEncoded = passwordEncoder.encode(userPassword);
 //                usuario.setUser_password(userPasswordEncoded);
-                usuario.setPermissions(Arrays.asList(roleRepo.findByNome("USER")));
+                usuario.setPermissions(Arrays.asList(roleRepository.findByNome("USER")));
                 System.out.println("PASSOU");
-                usuarioRepo.save(usuario);
+                usuarioRepository.save(usuario);
                 isCreated = true;
 
             }
@@ -54,12 +54,12 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
     @Override
     public List<Usuario> findAllUsuarios() {
-        return usuarioRepo.findAll();
+        return usuarioRepository.findAll();
     }
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Usuario user_data = usuarioRepo.findUserByUsername(username);
+        Usuario user_data = usuarioRepository.findUserByUsername(username);
         if(user_data == null){
             throw new UsernameNotFoundException("Usuario não encontrado");
         }
@@ -73,7 +73,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
     public Collection<GrantedAuthority> authorities(Usuario usuario){
         Collection<GrantedAuthority> permissoes = new ArrayDeque<>();
-        List<Role> roles = roleRepo.findByUsuariosIn(usuario);
+        List<Role> roles = roleRepository.findByUsuariosIn(usuario);
         for (Role role : roles){
             permissoes.add(new SimpleGrantedAuthority(("ROLE_" + role.getNome())));
         }

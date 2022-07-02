@@ -25,7 +25,7 @@ public class SecurityWebConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/").permitAll()
                 .antMatchers("/createUser").permitAll()
-                .antMatchers("/cadastro").permitAll()
+                .antMatchers("/cadastrar").permitAll()
                 .antMatchers("/sobre").permitAll()
                 .antMatchers("/bootstrap-5.0.0/**").permitAll()
                 .antMatchers("/fontawesome-5.15.3/**").permitAll()

@@ -1,7 +1,6 @@
 package br.senai.service.barservice;
 
 import br.senai.model.Bar;
-import br.senai.model.Cliente;
 
 import java.util.List;
 
